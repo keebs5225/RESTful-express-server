@@ -1,0 +1,14 @@
+{
+  "name": "js-web-server",
+  "version": "0",
+  "homepage": "https://bobbyreed.github.io/js-web-server",
+  "description": "A web server built with Express.js",
+  "main": "index.html",
+  "dependencies": {
+    "ejs": "^3.1.10",
+    "express": "^4.21.2"
+  },
+  "scripts": {
+
+  }
+}
