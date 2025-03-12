@@ -1,5 +1,4 @@
 /**
- * Import the Express.js framework
  * Q: What is Express.js and why use it instead of plain Node.js?
  * A: Express is a minimal, flexible Node.js web application framework that provides
  *    a robust set of features for web and mobile applications. It abstracts away
