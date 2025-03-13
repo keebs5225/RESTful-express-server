@@ -1,0 +1,39 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Pizza Oven",
+      "description": "Oven that makes pizza",
+      "price": 3600,
+      "category": "appliance"
+    },
+    {
+      "id": 2,
+      "name": "iPhone 4",
+      "description": "Latest smartphone (we carry). It has features.",
+      "price": 7999.99,
+      "category": "vintage electronics"
+    },
+    {
+      "id": 3,
+      "name": "Coffee Maker with IV drip",
+      "description": "For developers only",
+      "price": 49.99,
+      "category": "home"
+    },
+    {
+      "id": 4,
+      "name": "Tasty Mud",
+      "description": "Mud that you can pretend is tasty!",
+      "price": 16,
+      "category": "foodish"
+    },
+    {
+      "id": 5,
+      "name": "Wishy Washy Philosophies",
+      "description": "A book to teach you how to be difficult",
+      "price": 200,
+      "category": "book"
+    }
+  ]
+}

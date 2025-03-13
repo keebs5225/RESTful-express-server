@@ -1,0 +1,13 @@
+<section class="error-page">
+    <h2>Error</h2>
+    <div class="error-message">
+        <p>
+            <%= message || 'An error occurred' %>
+        </p>
+        <% if (status) { %>
+            <p>Status: <%= status %>
+            </p>
+            <% } %>
+    </div>
+    <a href="/" class="btn">Return to Home</a>
+</section>

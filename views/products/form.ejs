@@ -1,0 +1,40 @@
+<section class="product-form">
+    <h2>
+        <%= product ? 'Edit Product' : 'Add New Product' %>
+    </h2>
+
+    <form id="productForm" method="POST" action="<%= product ? `/products/${product.id}?_method=PUT` : '/products' %>">
+        <div class="form-group">
+            <label for="name">Product Name</label>
+            <input type="text" id="name" name="name" value="<%= product ? product.name : '' %>" required>
+        </div>
+
+        <div class="form-group">
+            <label for="price">Price ($)</label>
+            <input type="number" id="price" name="price" step="0.01" min="0" value="<%= product ? product.price : '' %>"
+                required>
+        </div>
+
+        <div class="form-group">
+            <label for="category">Category</label>
+            <select id="category" name="category" required>
+                <option value="">Select a category</option>
+                <option value="electronics" <%=product && product.category==='electronics' ? 'selected' : '' %>
+                    >Electronics</option>
+                <option value="home" <%=product && product.category==='home' ? 'selected' : '' %>>Home</option>
+                <option value="clothing" <%=product && product.category==='clothing' ? 'selected' : '' %>>Clothing
+                </option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="description">Description</label>
+            <textarea id="description" name="description" rows="4"><%= product ? product.description : '' %></textarea>
+        </div>
+
+        <button type="submit" class="btn submit-btn">
+            <%= product ? 'Update Product' : 'Add Product' %>
+        </button>
+        <a href="/products" class="btn cancel-btn">Cancel</a>
+    </form>
+</section>
