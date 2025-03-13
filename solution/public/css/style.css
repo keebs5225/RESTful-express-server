@@ -70,7 +70,7 @@ section {
 
 h2 {
     margin-bottom: 1.5rem;
-    color: #333;
+    color: #ffffff;
 }
 
 /* Products Grid */
@@ -118,8 +118,8 @@ h2 {
 /* Buttons and Forms */
 .btn {
     display: inline-block;
-    background: #333;
-    color: #fff;
+    background: #ffffff;
+    color: #000000;
     border: none;
     padding: 0.5rem 1rem;
     margin-right: 0.5rem;
@@ -131,7 +131,7 @@ h2 {
 }
 
 .view-btn {
-    background: #457b9d;
+    background: #e8c0ff;
 }
 
 .edit-btn {
@@ -186,4 +186,11 @@ footer {
     text-align: center;
     padding: 1rem 0;
     margin-top: 2rem;
+}
+
+.home-hero{
+    background: #6114b9;
+    gap: 10px;
+    color:aliceblue;
+    margin:10px;
 }
