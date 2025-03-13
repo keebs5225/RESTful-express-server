@@ -1,0 +1,36 @@
+<section class="products-list">
+    <h2>Products List</h2>
+
+    <div class="filters">
+        <input type="text" id="search" placeholder="Search products...">
+        <select id="category-filter">
+            <option value="">All Categories</option>
+            <option value="electronics">Electronics</option>
+            <option value="home">Home</option>
+            <option value="clothing">Clothing</option>
+        </select>
+    </div>
+
+    <div class="products-grid">
+        <% products.forEach(product=> { %>
+            <div class="product-card">
+                <h3>
+                    <%= product.name %>
+                </h3>
+                <p class="price">$<%= product.price.toFixed(2) %>
+                </p>
+                <p class="category">
+                    <%= product.category %>
+                </p>
+                <p class="description">
+                    <%= product.description %>
+                </p>
+                <div class="actions">
+                    <a href="/products/<%= product.id %>" class="btn view-btn">View</a>
+                    <a href="/products/<%= product.id %>/edit" class="btn edit-btn">Edit</a>
+                    <button class="btn delete-btn" data-id="<%= product.id %>">Delete</button>
+                </div>
+            </div>
+            <% }) %>
+    </div>
+</section>
