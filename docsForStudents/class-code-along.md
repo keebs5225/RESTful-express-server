@@ -34,7 +34,6 @@ By the end of this exercise, students will be able to:
 
 ## Project Setup
 ### Step 1: Initialize the Project
-Create a clone of your Express server repo and/or project directory (I'd highly recommend making a separate repo for this):
 Now, install the required dependencies in the new project directory:
 
 ```
@@ -168,6 +167,7 @@ async function updateProduct(id, updatedProduct) {
 }
 
 // Delete a product
+//TODO: further this logic by making it to where I can provide ANY field so long as the value is unique.
 async function deleteProduct(id) {
   const products = await getAllProducts();
   const index = products.findIndex(product => product.id === parseInt(id));
@@ -240,6 +240,7 @@ router.get('/', async (req, res) => {
 });
 
 // GET a single product by ID
+  // Why is "id" dynamic?
 router.get('/:id', async (req, res) => {
   try {
     const product = await productModel.getProductById(req.params.id);
@@ -330,9 +331,6 @@ First, let's create a layout template in `views/layouts/main.ejs`:
   </main>
   
   <footer>
-    <div class="container">
-      <p>&copy; 2025 Product API Demo</p>
-    </div>
   </footer>
   
   <script src="/js/main.js"></script>

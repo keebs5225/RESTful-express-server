@@ -18,8 +18,8 @@
       "id": 3,
       "name": "Coffee Maker with IV drip",
       "description": "For developers only",
-      "price": 49.99,
-      "category": "home"
+      "price": "49.99",
+      "category": "electronics"
     },
     {
       "id": 4,

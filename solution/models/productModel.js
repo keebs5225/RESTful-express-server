@@ -35,6 +35,9 @@ async function createProduct(product) {
     const newProduct = { id: newId, ...product };
     products.push(newProduct);
 
+    console.log("product is " + product);
+    console.log("newProduct is " + newProduct);
+
     await fs.writeFile(
         dataFile,
         JSON.stringify({ products }, null, 2)
