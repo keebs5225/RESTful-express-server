@@ -10,11 +10,20 @@
 
 <section class="features">
     <h3>Features</h3>
+    <br>
     <ul>
         <li>Complete CRUD operations for products - <em>create, read, update, and delete</em></li>
         <li>File-based data persistence - Products are stashed in /data/products.json</li>
         <li>API endpoints for integration</li>
         <li>Responsive frontend interface</li>
         <li>Input validation and error handling</li>
+    </ul>
+    <br>
+    <h3>Broken Stuff (that I may one day fix)</h3>
+    <br>
+    <ul>
+        <li>Edit products doesn't work using the gui form, however, it does work using API PUT method</li>
+        <li>Not broken, but logic is needed to handle strings, floats, and ints for form inputs. Currently, there is
+            validation on the form (frontend), but doesn't have a backend check. Ideally, we would have both.</li>
     </ul>
 </section>

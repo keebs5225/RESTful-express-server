@@ -3,6 +3,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    gap: 10px;
 }
 
 body {
@@ -13,10 +14,10 @@ body {
 }
 
 .container {
-    width: 90%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    margin: auto;
 }
 
 /* Header */
@@ -57,7 +58,13 @@ nav a:hover {
 
 /* Main Content */
 main {
+    display: flex;
+    flex-direction: column;
     padding: 2rem 0;
+    background-color: mediumpurple;
+    flex-grow: 1;
+    align-items: center;
+    gap: 10px;
 }
 
 section {
@@ -188,9 +195,13 @@ footer {
     margin-top: 2rem;
 }
 
-.home-hero{
+.home-hero {
     background: #6114b9;
     gap: 10px;
-    color:aliceblue;
-    margin:10px;
+    color: aliceblue;
+    margin: 10px;
+}
+
+.features {
+    gap: 10px;
 }

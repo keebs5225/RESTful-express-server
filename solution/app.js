@@ -127,7 +127,7 @@ app.get('/products/:id/edit', async (req, res) => {
 
         const product = await response.json();
 
-        res.render('products/form', {
+        res.render('/products/form', {
             title: 'Edit Product',
             product
         });

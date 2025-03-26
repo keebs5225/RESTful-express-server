@@ -34,6 +34,13 @@
       "description": "A book to teach you how to be difficult",
       "price": 200,
       "category": "book"
+    },
+    {
+      "id": 6,
+      "name": "Pizza burger",
+      "price": "15",
+      "category": "clothing",
+      "description": "A burger with pizza on it."
     }
   ]
 }
