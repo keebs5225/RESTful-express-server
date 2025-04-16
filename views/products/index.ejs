@@ -1,0 +1,58 @@
+<!--
+  SECTION: Products List
+
+  PURPOSE:
+  This section displays all available products and allows users to:
+  - Search products by name
+  - Filter products by category
+  - View, edit, or delete individual products
+-->
+
+<section class="products-list">
+    <h2>Products List</h2>
+
+    <!-- FILTERS SECTION -->
+    <!-- Text input for keyword search and dropdown to filter by product category -->
+    <div class="filters">
+        <input type="text" id="search" placeholder="Search products...">
+
+        <select id="category-filter">
+            <option value="">All Categories</option>
+            <option value="electronics">Electronics</option>
+            <option value="home">Home</option>
+            <option value="clothing">Clothing</option>
+        </select>
+    </div>
+
+    <!-- PRODUCTS GRID -->
+    <!-- Generated product cards based on 'products' array passed from backend -->
+    <div class="products-grid">
+        <% products.forEach(product => { %>
+            <div class="product-card">
+                <!-- Product name -->
+                <h3><%= product.name %></h3>
+
+                <!-- Product price formatted to 2 decimal places -->
+                <p class="price">$<%= product.price.toFixed(2) %></p>
+
+                <!-- Product category -->
+                <p class="category"><%= product.category %></p>
+
+                <!-- Product description -->
+                <p class="description"><%= product.description %></p>
+
+                <!-- Action buttons -->
+                <div class="actions">
+                    <!-- View product details -->
+                    <a href="/products/<%= product.id %>" class="btn view-btn">View</a>
+
+                    <!-- Edit product (goes to product edit form) -->
+                    <a href="/products/<%= product.id %>/edit" class="btn edit-btn">Edit</a>
+
+                    <!-- Delete product (uses data-id for JS handler) -->
+                    <button class="btn delete-btn" data-id="<%= product.id %>">Delete</button>
+                </div>
+            </div>
+        <% }) %>
+    </div>
+</section>
